@@ -353,6 +353,19 @@ func NewToolResultErrorf(format string, a ...any) *CallToolResult {
 	}
 }
 
+// NewToolResultCommand creates a CallToolResult with a command content.
+func NewToolResultCommand(command string, params map[string]interface{}) *CallToolResult {
+	return &CallToolResult{
+		Content: []Content{
+			CommandContent{
+				Type:    "command",
+				Command: command,
+				Params:  params,
+			},
+		},
+	}
+}
+
 // NewListResourcesResult creates a new ListResourcesResult
 func NewListResourcesResult(
 	resources []Resource,
