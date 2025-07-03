@@ -6,9 +6,9 @@ import (
 	"log"
 	"time"
 
-	"github.com/mark3labs/mcp-go/client"
-	"github.com/mark3labs/mcp-go/mcp"
-	"github.com/mark3labs/mcp-go/server"
+	"github.com/mathiasXie/mcp-go/client"
+	"github.com/mathiasXie/mcp-go/mcp"
+	"github.com/mathiasXie/mcp-go/server"
 )
 
 // handleDummyTool is a simple tool that returns "foo bar"

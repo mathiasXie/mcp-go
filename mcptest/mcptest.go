@@ -10,10 +10,10 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/mark3labs/mcp-go/client"
-	"github.com/mark3labs/mcp-go/client/transport"
-	"github.com/mark3labs/mcp-go/mcp"
-	"github.com/mark3labs/mcp-go/server"
+	"github.com/mathiasXie/mcp-go/client"
+	"github.com/mathiasXie/mcp-go/client/transport"
+	"github.com/mathiasXie/mcp-go/mcp"
+	"github.com/mathiasXie/mcp-go/server"
 )
 
 // Server encapsulates an MCP server and manages resources like pipes and context.
@@ -142,7 +142,7 @@ func (s *Server) Start(ctx context.Context) error {
 		mcpServer.AddTools(s.tools...)
 		mcpServer.AddPrompts(s.prompts...)
 		mcpServer.AddResources(s.resources...)
-		
+
 		for _, template := range s.resourceTemplates {
 			mcpServer.AddResourceTemplate(template.Template, template.Handler)
 		}
